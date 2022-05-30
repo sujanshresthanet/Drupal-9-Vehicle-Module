@@ -1,0 +1,56 @@
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.vehicle.canonical:
+  path: '/vehicle/{vehicle}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the vehicle entity
+    _entity_view: 'vehicle'
+    _title: 'Vehicle Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'vehicle.view'
+
+entity.vehicle.collection:
+  path: '/vehicle/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the vehicle entity.
+    _entity_list: 'vehicle'
+    _title: 'Vehicle List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view vehicle entity'
+
+vehicle.vehicle_add:
+  path: '/vehicle/add'
+  defaults:
+  # Calls the form.add controller, defined in the vehicle entity.
+    _entity_form: vehicle.add
+    _title: 'Add Vehicle'
+  requirements:
+    _entity_create_access: 'vehicle'
+
+entity.vehicle.edit_form:
+  path: '/vehicle/{vehicle}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the vehicle entity.
+    _entity_form: vehicle.edit
+    _title: 'Edit Vehicle'
+  requirements:
+    _entity_access: 'vehicle.edit'
+
+entity.vehicle.delete_form:
+  path: '/vehicle/{vehicle}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the vehicle entity.
+    _entity_form: vehicle.delete
+    _title: 'Delete Vehicle'
+  requirements:
+    _entity_access: 'vehicle.delete'
+
+vehicle.vehicle_settings:
+  path: 'admin/structure/vehicle_settings'
+  defaults:
+    _form: '\Drupal\vehicle\Form\VehicleSettingsForm'
+    _title: 'Vehicle Settings'
+  requirements:
+    _permission: 'administer vehicle entity'

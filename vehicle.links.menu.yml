@@ -1,0 +1,12 @@
+# Define the menu links for this module
+
+entity.vehicle.collection:
+  title: 'Vehicle Listing'
+  route_name: entity.vehicle.collection
+  description: 'List Vehicles'
+  weight: 10
+vehicle.admin.structure.settings:
+  title: Vehicle Settings
+  description: 'Configure Vehicle entity'
+  route_name:  vehicle.vehicle_settings
+  parent: system.admin_structure

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme(). for vehicle
+ */
+
+function vehicle_theme() {
+
+  return array(
+    'vehicle' => array(
+      'render element' => 'content',
+    ),
+  );
+}

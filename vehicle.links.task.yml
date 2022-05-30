@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+vehicle.settings_tab:
+  route_name: vehicle.vehicle_settings
+  title: Settings
+  base_route: vehicle.vehicle_settings
+
+vehicle.view:
+  route_name: entity.vehicle.canonical
+  base_route: entity.vehicle.canonical
+  title: View
+
+vehicle.page_edit:
+  route_name: entity.vehicle.edit_form
+  base_route: entity.vehicle.canonical
+  title: Edit
+
+vehicle.delete_confirm:
+  route_name:  entity.vehicle.delete_form
+  base_route:  entity.vehicle.canonical
+  title: Delete
+  weight: 10

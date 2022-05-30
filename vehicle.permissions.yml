@@ -1,0 +1,10 @@
+'delete vehicle entity':
+  title: Delete entity content.
+'add vehicle entity':
+  title: Add entity content
+'view vehicle entity':
+  title: View entity content
+'edit vehicle entity':
+  title: Edit entity content
+'administer vehicle entity':
+  title: Administer settings
